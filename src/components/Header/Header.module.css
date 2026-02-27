@@ -1,0 +1,164 @@
+.header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (min-width: 992px) {
+    .container {
+        padding: 0 48px;
+        height: 80px;
+    }
+}
+
+.logo a {
+    font-size: 18px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+.logoX {
+    color: #00ff88;
+    font-style: normal;
+}
+
+.nav {
+    display: none;
+}
+
+.desktopActions {
+    display: none;
+}
+
+.mobileActions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.mobileMenuBtn {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #1a1a1a;
+    padding: 4px;
+}
+
+@media (min-width: 992px) {
+    .logo a {
+        font-size: 24px;
+        gap: 8px;
+    }
+
+    .nav {
+        display: block;
+    }
+
+    .desktopActions {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .mobileActions {
+        display: none;
+    }
+
+    .mobileMenuBtn {
+        display: none;
+    }
+}
+
+.navList {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+@media (min-width: 992px) {
+    .navList {
+        flex-direction: row;
+        gap: 40px;
+    }
+}
+
+.navList a {
+    text-decoration: none;
+    color: #0F172A;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.navList a:hover {
+    color: #00ff88;
+}
+
+.loginBtn {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 15px;
+    font-weight: 700;
+    transition: color 0.2s;
+    text-align: center;
+}
+
+.loginBtn:hover {
+    color: #666;
+}
+
+.registerBtn {
+    text-decoration: none;
+    background-color: #00ff88;
+    color: #1a1a1a;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 12px 28px;
+    border-radius: 50px;
+    transition: all 0.2s;
+    text-align: center;
+}
+
+.registerBtn:hover {
+    background-color: #00e67a;
+    transform: translateY(-2px);
+}
+
+/* Mobile Nav Open State */
+@media (max-width: 991px) {
+    .navOpen {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        padding: 24px 20px;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid #f0f0f0;
+    }
+}
