@@ -1,0 +1,144 @@
+.aboutSection {
+    padding: 80px 0;
+    background-color: #ffffff;
+    /* Sayfa arka planına uygun */
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.banner {
+    background-color: #fff5f3;
+    /* Açık soft pembe arka plan */
+    border-radius: 40px;
+    padding: 56px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.imageColumn {
+    width: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    background-color: transparent;
+    position: relative;
+    display: flex;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.contentColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 900;
+    color: #111827;
+    /* Siyahımsı gri */
+    margin-top: 0;
+    margin-bottom: 32px;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+}
+
+.highlight {
+    color: #f65a5b;
+    /* Dikkat çeken pembe/kırmızı vurgu rengi */
+}
+
+.subtitle {
+    font-size: 16px;
+    font-weight: 800;
+    color: #111827;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.description {
+    font-size: 15px;
+    line-height: 1.7;
+    font-weight: 500;
+    color: #4b5563;
+    /* Gri metin rengi */
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+.discoverBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0b110e;
+    /* Siyah arka plan */
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 16px 36px;
+    border-radius: 30px;
+    /* Hap şeklinde buton */
+    text-decoration: none;
+    margin-top: 8px;
+    transition: background-color 0.2s ease, transform 0.1s;
+    border: none;
+    cursor: pointer;
+}
+
+.discoverBtn:hover {
+    background-color: #273038;
+    /* Hover durumunda hafif açılıyor */
+}
+
+.discoverBtn:active {
+    transform: scale(0.97);
+}
+
+@media (max-width: 991px) {
+    .banner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 40px 32px;
+        border-radius: 32px;
+    }
+
+    .imageColumn {
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .aboutSection {
+        padding: 60px 0;
+    }
+
+    .banner {
+        padding: 32px 24px;
+        border-radius: 24px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .imageColumn {
+        height: auto;
+        border-radius: 16px;
+    }
+
+    .discoverBtn {
+        width: 100%;
+    }
+}

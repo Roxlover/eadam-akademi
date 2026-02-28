@@ -244,3 +244,25 @@
         height: 50px;
     }
 }
+
+@media (max-width: 576px) {
+    .headline {
+        font-size: 32px;
+    }
+
+    .timerBadge {
+        font-size: 12px;
+        padding: 8px 16px;
+        flex-direction: column;
+        text-align: center;
+        gap: 4px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+
+    .hero {
+        padding: 40px 0;
+    }
+}

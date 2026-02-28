@@ -53,11 +53,15 @@
 
 @media (max-width: 576px) {
     .grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
     }
 
     .statValue {
-        font-size: 56px;
+        font-size: 36px;
+    }
+
+    .statLabel {
+        font-size: 11px;
     }
 }

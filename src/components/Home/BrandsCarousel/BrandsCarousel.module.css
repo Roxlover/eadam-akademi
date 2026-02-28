@@ -1,0 +1,129 @@
+.brandsSection {
+    padding: 60px 0;
+    background-color: #ffffff;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    width: 100%;
+    overflow: hidden;
+    /* Hide the overflow from the scrolling track */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 13px;
+    font-weight: 700;
+    color: #9ca3af;
+    /* Light grayish/silver text like in the design */
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.carouselContainer {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    /* Optional: Fading edges to make the scroll look smoother */
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* Space between the two rows */
+    margin-top: 30px;
+}
+
+.carouselTrack {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    /* Space between logos */
+    width: max-content;
+}
+
+.scrollLeft {
+    animation: scrollLeft 25s linear infinite;
+}
+
+.scrollRight {
+    animation: scrollRight 25s linear infinite;
+}
+
+/* Pause on hover */
+.carouselContainer:hover .scrollLeft,
+.carouselContainer:hover .scrollRight {
+    animation-play-state: paused;
+}
+
+.brandItem {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    /* You can adjust width if you want uniform logos, or leave it to rely on image aspect ratios */
+}
+
+.brandLogo {
+    max-height: 36px;
+    max-width: 140px;
+    /* Sınırlandırarak aşırı büyük/geniş logoları önlüyoruz */
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%) opacity(60%);
+    /* Apply silver/grayish tint effect */
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.brandLogo:hover {
+    filter: grayscale(0%) opacity(100%);
+    /* Full color on hover */
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        /* Move it left by exactly half the track width (the duplicated portion) */
+        transform: translateX(calc(-50% - 30px));
+        /* -30px for half the gap if necessary, adjust as needed based on gap */
+    }
+}
+
+@keyframes scrollRight {
+    0% {
+        /* Start from half-way point so it ends at 0 for a seamless loop */
+        transform: translateX(calc(-50% - 30px));
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .brandsSection {
+        padding: 40px 0;
+    }
+
+    .carouselTrack {
+        gap: 32px;
+    }
+
+    .brandLogo {
+        max-height: 28px;
+        max-width: 100px;
+    }
+
+    .carouselContainer {
+        gap: 20px;
+    }
+}
