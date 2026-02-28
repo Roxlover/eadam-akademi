@@ -1,0 +1,154 @@
+.coursesSection {
+    padding: 80px 0;
+    background-color: #faf9f6;
+    /* Very light warm background matching the design */
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 900;
+    color: #111827;
+    margin: 0;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    /* very light shadow to match design */
+    border: 1px solid #f8eedc;
+    /* light pale orange border effect */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+    border-color: #f0e6d2;
+}
+
+.cardContent {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.iconContainer {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* Fallback for when SVG/Img is missing */
+.fallbackIcon::before {
+    content: "📚";
+    font-size: 24px;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.courseTitle {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 800;
+    color: #111827;
+}
+
+.courseSubtitle {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #9ca3af;
+    /* Light gray */
+}
+
+.actionBtn {
+    background-color: #22c55e;
+    /* Bright green */
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 24px;
+    border-radius: 24px;
+    /* pill shape */
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.1s;
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+}
+
+.actionBtn:hover {
+    background-color: #16a34a;
+    /* Darker green on hover */
+}
+
+.actionBtn:active {
+    transform: scale(0.97);
+}
+
+@media (max-width: 991px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .coursesSection {
+        padding: 60px 0;
+    }
+
+    .card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 24px;
+    }
+
+    .actionBtn {
+        width: 100%;
+        text-align: center;
+        padding: 14px 24px;
+    }
+}
