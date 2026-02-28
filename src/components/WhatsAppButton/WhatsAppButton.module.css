@@ -1,0 +1,39 @@
+.whatsappBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 68px;
+    height: 68px;
+    background-color: #26d367;
+    /* WhatsApp's exact brand green */
+    color: #1a1a1a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 40px -5px rgba(38, 211, 103, 0.6);
+    /* Daha geniş, parlak yeşil glow */
+    z-index: 9999;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.whatsappBtn:hover {
+    transform: scale(1.08);
+    /* Hover'ı biraz daha kibar yaptık */
+    background-color: #1a1a1a;
+    /* Dark mode hover */
+    color: #26d367;
+}
+
+.whatsappBtn:hover svg {
+    color: #26d367 !important;
+}
+
+@media (max-width: 768px) {
+    .whatsappBtn {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+}

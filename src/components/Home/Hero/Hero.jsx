@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { MessageCircle } from 'lucide-react';
 import styles from './Hero.module.css';
 
 const Hero = () => {
@@ -82,17 +81,6 @@ const Hero = () => {
                     </Link>
                 </div>
             </div>
-
-            {/* Floating WhatsApp Button */}
-            <a
-                href="https://wa.me/905555555555"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.whatsappBtn}
-                aria-label="WhatsApp İletişim"
-            >
-                <MessageCircle size={28} />
-            </a>
         </section>
     );
 };

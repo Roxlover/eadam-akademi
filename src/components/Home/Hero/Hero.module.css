@@ -192,28 +192,7 @@
     /* Slate 300 */
 }
 
-/* WhatsApp Button */
-.whatsappBtn {
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    width: 60px;
-    height: 60px;
-    background-color: #00ff88;
-    color: #1a1a1a;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 10px 25px -5px rgba(0, 255, 136, 0.4);
-    z-index: 1000;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.whatsappBtn:hover {
-    transform: scale(1.1);
-    background-color: #00e67a;
-}
+/* Removed WhatsApp styles, using global WhatsAppButton component instead */
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
@@ -235,13 +214,6 @@
     .primaryBtn,
     .secondaryBtn {
         width: 100%;
-    }
-
-    .whatsappBtn {
-        bottom: 20px;
-        right: 20px;
-        width: 50px;
-        height: 50px;
     }
 }
 
