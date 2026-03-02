@@ -4,6 +4,9 @@ import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import TopBanner from "@/components/Home/TopBanner/TopBanner";
 import WhatsAppButton from "@/components/WhatsAppButton/WhatsAppButton";
+import PreFooter from "@/components/PreFooter/PreFooter";
+import BlogSection from "@/components/BlogSection/BlogSection";
+import ReviewsSlider from "@/components/ReviewsSlider/ReviewsSlider";
 
 const lexend = Lexend({
   variable: "--font-lexend",
@@ -34,6 +37,9 @@ export default function RootLayout({ children }) {
         <main style={{ minHeight: '100vh' }}>
           {children}
         </main>
+        <ReviewsSlider />
+        <BlogSection />
+        <PreFooter />
         <Footer />
         <WhatsAppButton />
       </body>
