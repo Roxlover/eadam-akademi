@@ -1,0 +1,199 @@
+.section {
+    background-color: #ffffff;
+    padding: 6rem 5%;
+    font-family: var(--font-inter, sans-serif);
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.headerRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 4rem;
+}
+
+.headerLeft {
+    display: flex;
+    flex-direction: column;
+}
+
+.tag {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: #0cd67e;
+    /* Match neon green */
+    letter-spacing: 0.15em;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.title {
+    font-family: var(--font-lexend), 'Lexend', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.viewAllLink {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    font-size: 1.05rem;
+    transition: color 0.2s ease;
+}
+
+.viewAllLink:hover {
+    color: #0cd67e;
+}
+
+.grid {
+    display: grid;
+    /* User requested 6 trainers. Let's do 4 columns on desktop like the image, and wrap the remaining 2, or 3 columns of 2 */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem 2rem;
+}
+
+.memberCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.imageContainer {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin-bottom: 1.5rem;
+    border-radius: 50%;
+    /* Keep overflow visible to allow the LinkedIn icon to break out, but we need an inner wrapper for the images */
+}
+
+.imageInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: transparent;
+    z-index: 1;
+}
+
+/* Very subtle light green/mint circular background blob */
+.imageBg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    height: 85%;
+    background-color: #f2fdf7;
+    border-radius: 50%;
+    z-index: 0;
+    border: 1px solid #e2f9ec;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.02);
+}
+
+.image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    /* Prevents faces from getting cut off if aspect ratios differ */
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.imageBW {
+    opacity: 1;
+}
+
+.imageColor {
+    opacity: 0;
+}
+
+.memberCard:hover .imageBW {
+    opacity: 0;
+}
+
+.memberCard:hover .imageColor {
+    opacity: 1;
+}
+
+.linkedinIcon {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    z-index: 2;
+    background-color: #ffffff;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.linkedinIcon:hover {
+    transform: scale(1.1);
+}
+
+.name {
+    font-family: var(--font-lexend), 'Lexend', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.role {
+    font-size: 0.95rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .headerRow {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .section {
+        padding: 4rem 1.5rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .title {
+        font-size: 32px;
+        line-height: 40px;
+    }
+}
