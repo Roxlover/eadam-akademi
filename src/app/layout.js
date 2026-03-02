@@ -7,6 +7,7 @@ import WhatsAppButton from "@/components/WhatsAppButton/WhatsAppButton";
 import PreFooter from "@/components/PreFooter/PreFooter";
 import BlogSection from "@/components/BlogSection/BlogSection";
 import ReviewsSlider from "@/components/ReviewsSlider/ReviewsSlider";
+import FeaturesGrid from "@/components/FeaturesGrid/FeaturesGrid";
 
 const lexend = Lexend({
   variable: "--font-lexend",
@@ -37,6 +38,7 @@ export default function RootLayout({ children }) {
         <main style={{ minHeight: '100vh' }}>
           {children}
         </main>
+        <FeaturesGrid />
         <ReviewsSlider />
         <BlogSection />
         <PreFooter />
