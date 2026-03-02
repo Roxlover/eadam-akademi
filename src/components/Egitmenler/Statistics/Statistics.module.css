@@ -1,0 +1,123 @@
+.statisticsSection {
+    background: linear-gradient(135deg, #f7f9f8 0%, #dff7eb 100%);
+    padding: 2rem 5% 6rem;
+    font-family: var(--font-inter, sans-serif);
+    position: relative;
+    margin-top: -2rem;
+    /* Pull up slightly to overlap or connect with hero */
+    z-index: 2;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.statCard {
+    background-color: #ffffff;
+    border-radius: 1.5rem;
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+    /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUpCard 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.statCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.08);
+    /* Stronger shadow on hover */
+}
+
+.statValue {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #0f172a;
+    /* Dark text */
+    line-height: 1;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.03em;
+}
+
+.statLabel {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #64748b;
+    /* Gray/Slate text */
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.statSubLabel {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #10b981;
+    /* Bright mint green */
+}
+
+@keyframes fadeInUpCard {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .statValue {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .statisticsSection {
+        padding: 1rem 1.5rem 3rem;
+    }
+
+    .statCard {
+        padding: 1.5rem 1rem;
+    }
+
+    .statValue {
+        font-size: 2.25rem;
+    }
+
+    .statLabel {
+        font-size: 0.75rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .statSubLabel {
+        font-size: 0.75rem;
+    }
+}

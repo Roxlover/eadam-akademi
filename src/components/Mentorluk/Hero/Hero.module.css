@@ -1,0 +1,423 @@
+.heroSection {
+    background-color: #f6fbf8;
+    /* Very light cool green/blue, nearly white matching image */
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 5% 6rem;
+    overflow: hidden;
+    position: relative;
+    font-family: var(--font-lexend), sans-serif;
+}
+
+.bgGlow {
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 150px;
+    background: radial-gradient(ellipse, rgba(31, 224, 139, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+    z-index: 0;
+    pointer-events: none;
+    border-radius: 50%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.contentWrapper {
+    flex: 1.1;
+    max-width: 600px;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #e5fbf2;
+    color: #102a1b;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 2rem;
+}
+
+.tagDot {
+    width: 6px;
+    height: 6px;
+    background-color: #1fe08b;
+    border-radius: 50%;
+}
+
+.title {
+    font-size: 4rem;
+    line-height: 1.1;
+    font-weight: 900;
+    color: #141e17;
+    /* Dark slate */
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.03em;
+}
+
+.highlight {
+    color: #2eff8b;
+    /* Bright mint green from design */
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #4b5563;
+    margin-bottom: 2.5rem;
+    font-weight: 500;
+    max-width: 500px;
+}
+
+.buttonGroup {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.primaryBtn {
+    background-color: #2eff8b;
+    color: #0d2216;
+    /* Dark green/black */
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(46, 255, 139, 0.2);
+}
+
+.primaryBtn:hover {
+    background-color: #1fe08b;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -5px rgba(31, 224, 139, 0.4);
+}
+
+.secondaryBtn {
+    background-color: #ffffff;
+    color: #111827;
+    padding: 0.75rem 1.5rem 0.75rem 0.75rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+    border: 1px solid #e5e7eb;
+    cursor: pointer;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.05);
+}
+
+.secondaryBtn:hover {
+    background-color: #f9fafb;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.iconCircle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #2eff8b;
+}
+
+.playIcon {
+    color: #1fe08b;
+    margin-left: 2px;
+}
+
+.socialProof {
+    display: inline-flex;
+    align-items: center;
+    gap: 2rem;
+    background-color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.avatars {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    margin-right: -12px;
+    object-fit: cover;
+}
+
+.avatarCount {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #141e17;
+    /* Dark black/green */
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border: 3px solid #ffffff;
+    z-index: 10;
+}
+
+.ratingInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.ratingScore {
+    font-weight: 800;
+    color: #111827;
+    font-size: 0.9rem;
+}
+
+.ratingText {
+    font-size: 0.75rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+/* Right Side - Visual Wrapper */
+.visualWrapper {
+    flex: 0.9;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    max-width: 550px;
+    width: 100%;
+}
+
+.imageContainer {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 2rem;
+    background-color: #f3f4f6;
+    box-shadow: 0 40px 60px -15px rgba(0, 0, 0, 0.1);
+    overflow: visible;
+    /* to allow badge to stick out */
+}
+
+.mainImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+    z-index: 0;
+}
+
+/* Red Badge (ACELE ET) */
+.urgentBadge {
+    position: absolute;
+    top: -20px;
+    right: -10px;
+    background-color: #f74558;
+    /* bright red */
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    transform: rotate(4deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px -5px rgba(247, 69, 88, 0.5);
+    z-index: 10;
+}
+
+.urgentTextSmall {
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+.urgentTextLarge {
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+/* Glassmorphism Card (Size Ozel 1-on-1 Seanslar) */
+.glassCard {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    background: rgba(30, 30, 30, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 1.25rem;
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    z-index: 10;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.cardIconBox {
+    background-color: #141e17;
+    width: 48px;
+    height: 48px;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.cardText {
+    flex: 1;
+}
+
+.cardText h4 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 0.25rem 0;
+}
+
+.cardText p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.8rem;
+    margin: 0;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+
+.arrowTopRight {
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    background-color: #ffffff;
+    color: #141e17;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .contentWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .socialProof {
+        justify-content: center;
+    }
+
+    .visualWrapper {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .heroSection {
+        padding: 6rem 5% 4rem;
+        min-height: auto;
+    }
+
+    .title {
+        font-size: 2.25rem;
+    }
+
+    .buttonGroup {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .primaryBtn,
+    .secondaryBtn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .glassCard {
+        width: 90%;
+        bottom: 1rem;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .cardText h4 {
+        font-size: 0.95rem;
+    }
+
+    .cardText p {
+        font-size: 0.75rem;
+    }
+
+    .urgentBadge {
+        transform: rotate(0deg);
+        top: -15px;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0.6rem 1.25rem;
+    }
+
+    .urgentTextLarge {
+        font-size: 0.95rem;
+    }
+}

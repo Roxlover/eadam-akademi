@@ -1,0 +1,287 @@
+.section {
+    background-color: #f6fdf9;
+    /* very light mint/off-white */
+    padding: 5rem 5%;
+    font-family: var(--font-inter, sans-serif);
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.headerRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3.5rem;
+}
+
+.headerTexts {
+    max-width: 600px;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #111827;
+    /* Dark slate */
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    font-size: 1.05rem;
+    color: #6b7280;
+    /* Gray text */
+    line-height: 1.6;
+}
+
+.navigationControls {
+    display: flex;
+    gap: 1rem;
+}
+
+.navButton {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #d1d5db;
+    /* Light gray border */
+    display: none;
+    /* Hidden on desktop */
+    align-items: center;
+    justify-content: center;
+    color: #4b5563;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navButton:hover {
+    background-color: #10b981;
+    /* Mint green on hover */
+    color: white;
+    border-color: #10b981;
+}
+
+/* CARDS GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.memberCard {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.imageContainer {
+    width: 100%;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    background-color: #e5e7eb;
+    /* Light gray fallback background */
+    aspect-ratio: 4/5;
+    margin-bottom: 1.5rem;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom;
+    filter: grayscale(100%);
+    /* B&W by default like in design */
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.memberCard:hover .image {
+    filter: grayscale(0%);
+    /* Color on hover */
+    transform: scale(1.05);
+}
+
+.cardContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.name {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 0.25rem;
+}
+
+.role {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #10b981;
+    /* Mint green */
+    margin-bottom: 0.25rem;
+}
+
+.experience {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-bottom: 1rem;
+}
+
+.purchaseBtn {
+    background-color: #1fe08b;
+    /* Bright green */
+    color: #064e3b;
+    /* Dark text */
+    border: none;
+    border-radius: 9999px;
+    padding: 0.75rem 0;
+    width: 100%;
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.purchaseBtn:hover {
+    background-color: #0cd67e;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(31, 224, 139, 0.4), 0 4px 6px -2px rgba(31, 224, 139, 0.2);
+}
+
+/* FOOTER BUTTON */
+.footerRow {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.viewAllBtn {
+    background-color: transparent;
+    color: #10b981;
+    border: 1px solid #10b981;
+    padding: 0.9rem 2rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.viewAllBtn:hover {
+    background-color: #f0fdf4;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .headerRow {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .navigationControls {
+        align-self: flex-end;
+        display: flex;
+        /* Show container */
+    }
+
+    .navButton {
+        display: flex;
+        /* Show buttons */
+    }
+}
+
+@media (max-width: 640px) {
+    .section {
+        padding: 3rem 1.5rem;
+    }
+
+    .gridContainer {
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+        /* Reduced from 2rem */
+        margin-right: -1.5rem;
+        /* Negate section padding to scroll to edge */
+        padding-right: 1.5rem;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        /* Hide scrollbar Firefox */
+        -ms-overflow-style: none;
+        /* Hide scrollbar IE/Edge */
+    }
+
+    .gridContainer::-webkit-scrollbar {
+        display: none;
+        /* Hide scrollbar Safari/Chrome */
+    }
+
+    .grid {
+        display: flex;
+        /* Switch from grid to flex for horizontal scrolling */
+        gap: 1.5rem;
+        width: max-content;
+        margin-bottom: 0.5rem;
+        /* Reduced from 2rem */
+    }
+
+    .memberCard {
+        width: 300px;
+        scroll-snap-align: start;
+        flex-shrink: 0;
+    }
+
+    .imageContainer {
+        aspect-ratio: 4/5;
+        /* Revert to portrait since they scroll horizontally now */
+    }
+
+    .name {
+        font-size: 1.15rem;
+    }
+
+    .role {
+        font-size: 0.85rem;
+    }
+
+    .experience {
+        font-size: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .purchaseBtn {
+        font-size: 0.85rem;
+        padding: 0.65rem 0;
+    }
+
+    .footerRow {
+        margin-top: 0;
+        /* Reduced from 2rem (default) */
+    }
+
+    .viewAllBtn {
+        font-size: 0.85rem;
+        padding: 0.75rem 1.5rem;
+    }
+}
