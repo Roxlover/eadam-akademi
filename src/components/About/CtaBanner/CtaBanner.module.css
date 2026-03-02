@@ -242,6 +242,8 @@
 
     .buttonGroup {
         justify-content: center;
+        flex-wrap: wrap;
+        /* allow buttons to stack if necessary */
     }
 }
 
@@ -255,7 +257,34 @@
     }
 
     .title {
-        font-size: 30px;
+        font-size: 28px;
+        /* smaller title for mobile */
+    }
+
+    .avatarWrapper {
+        width: 160px;
+        /* slightly smaller avatar on mobile */
+        height: 160px;
+    }
+
+    .badgeRed {
+        left: 50%;
+        transform: translateX(-50%);
+        /* center badge above avatar on mobile */
+        top: -15px;
+    }
+
+    .timerBlock {
+        gap: 0.5rem;
+    }
+
+    .timeBox {
+        width: 55px;
+        height: 55px;
+    }
+
+    .timeNumber {
+        font-size: 1.15rem;
     }
 
     .buttonGroup {
@@ -268,9 +297,5 @@
     .btnWhatsapp {
         width: 100%;
         justify-content: center;
-    }
-
-    .badgeRed {
-        left: -15px;
     }
 }

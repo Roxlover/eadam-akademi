@@ -193,7 +193,35 @@
     }
 
     .title {
-        font-size: 32px;
-        line-height: 40px;
+        font-size: 28px;
+        /* Reduced from 32px */
+        line-height: 36px;
+    }
+
+    .tag {
+        font-size: 0.75rem;
+        /* Smaller tag */
+        margin-bottom: 0.8rem;
+    }
+
+    .viewAllLink {
+        font-size: 0.95rem;
+        /* Smaller view all */
+    }
+
+    .imageContainer {
+        width: 180px;
+        /* Smaller image wrapper */
+        height: 180px;
+    }
+
+    .name {
+        font-size: 1.1rem;
+        /* Smaller name */
+    }
+
+    .role {
+        font-size: 0.85rem;
+        /* Smaller role */
     }
 }

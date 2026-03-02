@@ -374,18 +374,27 @@
 
 @media (max-width: 768px) {
     .heroSection {
-        padding: 6rem 1.5rem;
+        padding: 5rem 1.5rem;
         height: auto;
     }
 
+    .tag {
+        font-size: 0.75rem;
+        padding: 0.4rem 1rem;
+        margin-bottom: 1.5rem;
+    }
+
     .title {
-        font-size: 36px;
-        line-height: 44px;
+        font-size: 32px;
+        /* Much smaller title */
+        line-height: 40px;
+        margin-bottom: 1.5rem;
     }
 
     .container {
         flex-direction: column;
         text-align: center;
+        gap: 2.5rem;
     }
 
     .contentColumn {
@@ -395,6 +404,9 @@
 
     .description {
         text-align: center;
+        font-size: 1rem;
+        /* Smaller text */
+        margin-bottom: 2rem;
     }
 
     .buttonGroup {
@@ -407,28 +419,61 @@
     .secondaryBtn {
         width: 100%;
         justify-content: center;
+        padding: 0.8rem 1.5rem;
+        /* Smaller button padding */
+        font-size: 0.95rem;
+        /* Smaller button font */
     }
 
     .imageWrapper {
         width: 100%;
         max-width: 100%;
+        border-radius: 1.5rem;
     }
 
+    .mainImage {
+        border-radius: 1.5rem;
+    }
+
+    /* Floating Cards Shrink */
     .satisfactionCard {
         right: auto;
         left: 50%;
-        top: 5%;
+        top: 2%;
         transform: translateX(-50%) rotate(6deg) !important;
+        padding: 0.6rem 1rem;
+        /* Smaller card padding */
+    }
+
+    .satisfactionText {
+        font-size: 0.8rem;
+        /* Smaller 98% text */
+    }
+
+    .greenDot {
+        width: 8px;
+        height: 8px;
     }
 
     .ratingCard {
         width: 90%;
         bottom: 5%;
-        padding: 0.5rem 1rem 0.5rem 0.5rem;
+        padding: 0.5rem 0.75rem 0.5rem 0.5rem;
+    }
+
+    .avatar,
+    .avatarPlus {
+        width: 36px;
+        height: 36px;
+        margin-left: -10px;
+    }
+
+    .avatarPlus {
+        font-size: 0.75rem;
     }
 
     .ratingScore {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
     }
 
     .animateSlideInRight {
